@@ -1,13 +1,14 @@
 # Laugh at IE
 [![MIT](https://img.shields.io/github/license/the-fukui/laugh-at-IE)](https://github.com/the-fukui/laugh-at-IE/blob/master/LICENSE)
 [![npm version](https://badge.fury.io/js/laugh-at-ie.svg)](https://badge.fury.io/js/laugh-at-ie)
+![size](https://img.shields.io/bundlephobia/min/laugh-at-ie)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/01dcc711-2cf7-4bb8-80ca-83a83a64da0b/deploy-status)](https://app.netlify.com/sites/laugh-at-ie/deploys)
 
-This script laugh at those who still access your website with Internet Explorer.
+This script laugh at those who still access your website with Internet Explorer. 😂
 
-[Demo](https://laugh-at-ie.netlify.com/) (Open with IE🙏）
+[Demo](https://laugh-at-ie.netlify.com/) (Open with IE, please 🙏）
 
-- Play laughing sound when page loaded and any error has occured with IE. 
+- Play laughing sound when page loaded and when any error has occured with IE. 
 - You can set an arbitrary function to callback when laughing sound is played.
 
 
