@@ -8,7 +8,7 @@ This script laugh at those who still access your website with Internet Explorer.
 
 [Demo](https://laugh-at-ie.netlify.com/) (Open with IE, please 🙏）
 
-- Play laughing sound when page loaded and any error has occured with IE. 
+- Play laughing sound when page loaded and when any error has occured with IE. 
 - You can set an arbitrary function to callback when laughing sound is played.
 
 
