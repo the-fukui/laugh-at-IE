@@ -13,21 +13,32 @@ module.exports = {
         libraryExport: 'default',
         libraryTarget: 'umd',
         globalObject: 'this',
-        umdNamedDefine:true
+        umdNamedDefine: true
     },
     module: {
         rules: [{
-            test: /\.js$/,
-            use: [{
-                loader: 'babel-loader',
+                test: /\.js$/,
+                use: [{
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            '@babel/preset-env'
+                        ]
+                    },
+                }, ],
+                exclude: /node_modules/,
+            },
+            {
+                enforce: 'pre',
+                test: /\.(js|jsx)$/,
+                exclude: /node_modules/,
+                loader: 'eslint-loader',
                 options: {
-                    presets: [
-                        '@babel/preset-env'
-                    ]
-                }
-            }],
-            exclude: /node_modules/,
-        }]
+                    fix: true,
+                    configFile: '.eslintrc.js',
+                },
+            },
+        ]
     },
     plugins: [
         new HtmlWebpackPlugin({ template: "./src/index.html", inject: 'head' }),

@@ -45,11 +45,12 @@ You can designate your original laughing sound and callback function. Default se
 var laugh = new LaughAtIE({
     onLoad: {
         sound: 'https://laugh-at-ie.netlify.com/sound/laugh.mp3',
-        callback: () => {}
+        callback: function(){}
     },
     onError: {
-        sound: 'https://laugh-at-ie.netlify.com/sound/laugh.mp3',
-        callback: (e) => {
+        sound: 'https://laugh-at-ie.netlify.com/sound/laugh2.mp3',
+        callback: function(e){
+            //You can get error message 
             alert('Error!\n\n' + e)
         }
     }
