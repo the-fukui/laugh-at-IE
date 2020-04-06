@@ -1,4 +1,7 @@
 # Laugh at IE
+[![MIT](https://img.shields.io/github/license/the-fukui/laugh-at-IE)](https://github.com/the-fukui/laugh-at-IE/blob/master/LICENSE)
+![npm-publish](https://github.com/the-fukui/laugh-at-IE/workflows/npm-publish/badge.svg?branch=master)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/01dcc711-2cf7-4bb8-80ca-83a83a64da0b/deploy-status)](https://app.netlify.com/sites/laugh-at-ie/deploys)
 
 This script laugh at those who still access your website with Internet Explorer.
 
