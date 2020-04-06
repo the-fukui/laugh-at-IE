@@ -31,7 +31,7 @@ laugh.init()
 ### or using \<script\> tag in the HTML:
 
 ```html
-<script src="https://unpkg.com/laugh-at-ie@1.0.1/dist/index.js"></script>
+<script src="https://unpkg.com/laugh-at-ie/dist/index.js"></script>
 <script>
 var laugh = new LaughAtIE();
 laugh.init();
