@@ -26,9 +26,9 @@ jobs:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           REPO: ${{github.repository}}
           COMMIT: ${{github.sha}}
-        run: ./release.sh
-      - name: test
-        run: npm run test
+        run: ./.github/workflows/release.sh
+      # - name: test
+      #   run: npm run test
       - name: build
         run: npm run build
       - name: release
