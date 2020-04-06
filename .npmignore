@@ -3,3 +3,4 @@ dist/sound/
 dist/index.html
 .github/
 webpack.config.js
+.eslintrc.js
