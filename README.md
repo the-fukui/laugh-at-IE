@@ -1,0 +1,85 @@
+# Laugh at IE
+
+This script laugh at those who still access your website with Internet Explorer.
+
+[Demo](https://laugh-at-ie.netlify.com/) (Open with IE🙏）
+
+- Play laughing sound when page loaded and any error has occured with IE. 
+- You can set an arbitrary function to callback when laughing sound is played.
+
+
+## Installation & Usage
+
+
+### Install via npm
+```sh
+npm install laugh-at-ie
+```
+
+Import it to your project & initialize it.
+
+```javascript
+import LaughAtIE from 'laugh-at-ie'  
+
+const laugh = new LaughAtIE()
+laugh.init()
+```
+
+### or using \<script\> tag in the HTML:
+
+```html
+<script src="https://unpkg.com/laugh-at-ie@1.0.1/dist/index.js"></script>
+<script>
+var laugh = new LaughAtIE();
+laugh.init();
+</script>
+```
+
+## Customization
+You can designate your original laughing sound and callback function. Default settings below.
+
+```javascript
+var laugh = new LaughAtIE({
+    onLoad: {
+        sound: 'https://laugh-at-ie.netlify.com/sound/laugh.mp3',
+        callback: () => {}
+    },
+    onError: {
+        sound: 'https://laugh-at-ie.netlify.com/sound/laugh.mp3',
+        callback: (e) => {
+            alert('Error!\n\n' + e)
+        }
+    }
+});
+laugh.init();
+```
+
+### sample
+[Demo site](https://laugh-at-ie.netlify.com/)
+
+```javascript
+function error(e) {
+    var confirm = window.confirm('Error message: ' + e + '\n\nAn error occured. Do you want to get Chrome?');
+    if (confirm) {
+        location.href('https://www.google.com/chrome/')
+    }
+}
+
+function welcome() {
+    alert('Are you still use Internet Explorer???');
+}
+
+var laugh = new LaughAtIE({
+    onLoad: {
+        callback: welcome
+    },
+    onError: {
+        callback: error
+    }
+});
+laugh.init();
+```
+
+## License
+[MIT](https://github.com/the-fukui/laugh-at-IE/blob/master/LICENSE)
+

@@ -1,0 +1,38 @@
+{
+  "name": "laugh-at-ie",
+  "version": "1.0.1",
+  "description": "",
+  "main": "./dist/index.js",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "prepublish": "webpack --mode=production",
+    "dev": "webpack-dev-server",
+    "serve": "serve dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://the-fukui@github.com/the-fukui/laugh-at-IE.git"
+  },
+  "author": "the-fukui",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/the-fukui/laugh-at-IE/issues"
+  },
+  "homepage": "https://github.com/the-fukui/laugh-at-IE#readme",
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "babel-loader": "^8.1.0",
+    "copy-webpack-plugin": "^5.1.1",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.0.4",
+    "serve": "^11.3.0",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-server": "^3.10.3",
+    "write-file-webpack-plugin": "^4.5.1"
+  },
+  "dependencies": {
+    "deepmerge": "^4.2.2"
+  }
+}
