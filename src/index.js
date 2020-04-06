@@ -27,32 +27,43 @@ class LaughAtIE {
     return false;
   }
 
-  play(eventName = "onLoad", e = "onLoad") {
-    const audio = new Audio();
-    audio.src = this.options[eventName].sound;
-    audio.addEventListener("canplay", () => {
-      audio.play();
+  play(eventName = "onLoad", e = "") {
+    if (this.options[eventName].audio.readyState === 4) {
+      this.options[eventName].audio.pause();
+      this.options[eventName].audio.currentTime = 0;
+      this.options[eventName].audio.play();
       this.options[eventName].callback(e);
-    });
-  }
-
-  onError() {
-    if (typeof window !== "undefined") {
-      window.onerror = (e) => {
-        this.play("onError", e);
+    } else {
+      this.options[eventName].audio.oncanplaythrough = () => {
+        this.play(eventName, e);
       };
     }
+  }
+
+  load(eventName = "onLoad") {
+    this.options[eventName].audio.src = this.options[eventName].sound;
   }
 
   init() {
     if (!this.isIE()) return;
 
-    // ロード時
-    if (this.options.onLoad) this.play("onLoad", "onLoad");
+    this.options.onLoad.audio = new Audio();
+    this.options.onError.audio = new Audio();
 
-    // エラー時（ロード時のエラーを無視するために遅延させる）
+    // ロード時
+    this.load("onLoad");
+    this.play("onLoad");
+
+    // エラー時サウンドのプリロード
+    this.load("onError");
+
+    // エラーリスナー（ロード時のエラーを無視するために遅延させる）
     setTimeout(() => {
-      this.onError();
+      if (typeof window !== "undefined") {
+        window.onerror = (e) => {
+          this.play("onError", e);
+        };
+      }
     }, 500);
   }
 }
