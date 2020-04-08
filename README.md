@@ -10,6 +10,7 @@ This script laugh at those who still access your website with Internet Explorer.
 
 - Play laughing sound when page loaded and when any error has occured with IE. 
 - You can set an arbitrary function to callback when laughing sound is played.
+- Supports IE 9+
 
 
 ## Installation & Usage
