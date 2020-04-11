@@ -4,7 +4,6 @@ const WriteFilePlugin = require('write-file-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
-  // target:'node',
   entry: `./src/index.js`,
   output: {
     path: path.resolve(__dirname, "dist"),
