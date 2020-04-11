@@ -74,7 +74,7 @@ function error(e) {
 }
 
 function welcome() {
-    alert('Are you still use Internet Explorer???');
+    alert('Are you still using Internet Explorer???');
 }
 
 var laugh = new LaughAtIE({
