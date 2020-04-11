@@ -67,7 +67,7 @@ laugh.init();
 
 ```javascript
 function error(e) {
-    var confirm = window.confirm('Error message: ' + e + '\n\nAn error occured. Do you want to get Chrome?');
+    var confirm = window.confirm('Error message: ' + e + '\n\nAn error has occurred. Do you want to get Chrome?');
     if (confirm) {
         location.href('https://www.google.com/chrome/')
     }
